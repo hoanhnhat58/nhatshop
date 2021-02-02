@@ -4,7 +4,7 @@
             <div class="col-sm-3">
                 <div class="widget">
                     <h4 class="widget-title">Instagram Feed</h4>
-                    <div id="beta-instagram-feed"><div></div></div>
+                    <div id="beta-instagram-feed"><div>a</div></div>
                 </div>
             </div>
             <div class="col-sm-2">
@@ -12,12 +12,10 @@
                     <h4 class="widget-title">Information</h4>
                     <div>
                         <ul>
-                            <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Web Design</a></li>
-                            <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Web development</a></li>
-                            <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Marketing</a></li>
-                            <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Tips</a></li>
-                            <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Resources</a></li>
-                            <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Illustrations</a></li>
+                            <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Hotline:0936 022 029</a></li>
+                            <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> website:Nhatshop.itd</a></li>
+                            <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Hồ Anh Nhật</a></li>
+                            <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Email:hoanhnhat.58@gmail.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -29,8 +27,8 @@
                         <div>
                             <div class="contact-info">
                                 <i class="fa fa-map-marker"></i>
-                                <p>30 South Park Avenue San Francisco, CA 94108 Phone: +78 123 456 78</p>
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit asnatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p>
+                                <p> 387/21/A2 Đường Bình Thành,Phường Bình Hưng Hòa B, Quận Bình Tân,TP. Hồ Chí Minh.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -50,11 +48,11 @@
 </div> <!-- #footer -->
 <div class="copyright">
     <div class="container">
-        <p class="pull-left">Privacy policy. (&copy;) 2014</p>
+        <p class="pull-left">©  Tất cả bản quyền thuộc về NhatShop</p>
         <p class="pull-right pay-options">
-            <a href="#"><img src="assets/dest/images/pay/master.jpg" alt="" /></a>
-            <a href="#"><img src="assets/dest/images/pay/pay.jpg" alt="" /></a>
-            <a href="#"><img src="assets/dest/images/pay/visa.jpg" alt="" /></a>
+            <a href="#"><img src="assets/dest/images/pay/facebook.png" alt="" /></a>
+            <a href="#"><img src="assets/dest/images/pay/payal.png" alt="" /></a>
+            <a href="#"><img src="assets/dest/images/pay/zalo.png" alt="" /></a>
             <a href="#"><img src="assets/dest/images/pay/paypal.jpg" alt="" /></a>
         </p>
         <div class="clearfix"></div>

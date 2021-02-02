@@ -13,13 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages/home');
-});
 
 Auth::routes();
 
 Route::get('home', [ 'as' => 'trang-chu', 'uses' => 'App\Http\Controllers\PageController@getIndex']);
+Route::get('/', [ 'as' => 'trang-chu', 'uses' => 'App\Http\Controllers\PageController@getIndex']);
 
 
 Route::get('/product-type',[App\Http\Controllers\PageController::class,'getLoaiSp'])->name('pages/loai-san-pham');
