@@ -11,46 +11,46 @@
             <div class="container">
                 <div class="pull-left auto-width-left">
                     <ul class="top-menu menu-beta l-inline">
-                        <li><a href=""><i class="fa fa-home"></i> 90-92 Lê Thị Riêng, Bến Thành, Quận 1</a></li>
-                        <li><a href=""><i class="fa fa-phone"></i> 0163 296 7751</a></li>
+                        <li><a href=""><i class="fa fa-home"></i>Số 1 Mỹ An 15, Bắc Mỹ An,Ngũ Hành Sơn,Đà Nẵng</a></li>
+                        <li><a href=""><i class="fa fa-phone"></i>0981928608</a></li>
                     </ul>
                 </div>
-                <div class="pull-right auto-width-right">
-                    <ul class="top-details menu-beta l-inline">
-                        <li><a href="#"><i class="fa fa-user"></i>Tài khoản</a></li>
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Đăng nhập') }}</a>
-                                </li>
-                            @endif
+{{--                <div class="pull-right auto-width-right">--}}
+{{--                    <ul class="top-details menu-beta l-inline">--}}
+{{--                        <li><a href="#"><i class="fa fa-user"></i>Tài khoản</a></li>--}}
+{{--                        @guest--}}
+{{--                            @if (Route::has('login'))--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Đăng nhập') }}</a>--}}
+{{--                                </li>--}}
+{{--                            @endif--}}
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Đăng kí') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+{{--                            @if (Route::has('register'))--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Đăng kí') }}</a>--}}
+{{--                                </li>--}}
+{{--                            @endif--}}
+{{--                        @else--}}
+{{--                            <li class="nav-item dropdown">--}}
+{{--                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
+{{--                                    {{ Auth::user()->name }}--}}
+{{--                                </a>--}}
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+{{--                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">--}}
+{{--                                    <a class="dropdown-item" href="{{ route('logout') }}"--}}
+{{--                                       onclick="event.preventDefault();--}}
+{{--                                                     document.getElementById('logout-form').submit();">--}}
+{{--                                        {{ __('Logout') }}--}}
+{{--                                    </a>--}}
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+{{--                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">--}}
+{{--                                        @csrf--}}
+{{--                                    </form>--}}
+{{--                                </div>--}}
+{{--                            </li>--}}
+{{--                        @endguest--}}
+{{--                    </ul>--}}
+{{--                </div>--}}
                 <div class="clearfix"></div>
             </div> <!-- .container -->
         </div> <!-- .header-top -->
@@ -69,53 +69,48 @@
                     </div>
 
                     <div class="beta-comp">
+                        @if(Session::has('cart'))
                         <div class="cart">
-                            <div class="beta-select"><i class="fa fa-shopping-cart"></i> Giỏ hàng (Trống) <i class="fa fa-chevron-down"></i></div>
-                            <div class="beta-dropdown cart-body">
-                                <div class="cart-item">
-                                    <div class="media">
-                                        <a class="pull-left" href="#"><img src="assets/dest/images/products/cart/1.png" alt=""></a>
-                                        <div class="media-body">
-                                            <span class="cart-item-title">Sample Woman Top</span>
-                                            <span class="cart-item-options">Size: XS; Colar: Navy</span>
-                                            <span class="cart-item-amount">1*<span>$49.50</span></span>
+                            <div class="beta-select"><i class="fa fa-shopping-cart"></i> Giỏ hàng @if(Session::has('cart')){{Session('cart')->totalQty}} @else Trống @endif <i class="fa fa-chevron-down"></i></div>
+                            <div class="form-show">
+                            <div class="beta-dropdown cart-body cart-item-scroll">
+                                    @foreach($product_cart as $product)
+                                <div class="cart-show">
+                                    <div class="cart-item">
+                                        <a class="cart-item-delete" href="{{route('xoagiohang',$product['item']['id'])}}"><i class="fa fa-times"></i></a>
+                                        <div class="media">
+                                            <a class="pull-left" href="#"><img src="{{asset('image/product/'.$product['item']['image'])}}" alt=""></a>
+                                            <div class="media-body">
+                                                <span class="cart-item-title">{{$product['item']['name']}}</span>
+                                                {{--                                            <span class="cart-item-amount">{{$product['qty']}}*<span>@if($product['item']['promotion_price']==0){{number_format($product['item']['unit_price'])}}@else{{number_format($product['item']['promotion_price'])}}@endif</span></span>--}}
+                                                <span class="cart-item-amount">@if($product['item']['promotion_price'] > 0)
+                                                        {{$product['qty']}}*<span>{{number_format($product['item']['promotion_price'])}}
+                                                            @else
+                                                                {{$product['qty']}}*<span>{{number_format($product['item']['unit_price'])}}
+                                                                    @endif
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                    @endforeach
+                            </div>
 
-                                <div class="cart-item">
-                                    <div class="media">
-                                        <a class="pull-left" href="#"><img src="assets/dest/images/products/cart/2.png" alt=""></a>
-                                        <div class="media-body">
-                                            <span class="cart-item-title">Sample Woman Top</span>
-                                            <span class="cart-item-options">Size: XS; Colar: Navy</span>
-                                            <span class="cart-item-amount">1*<span>$49.50</span></span>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
+                            <div class="cart-show-1 "  >
+                                <div class="cart-caption cart-caption-show" >
+                                    {{--                                                <div class="cart-total text-right">Tổng tiền: <span class="cart-total-value">@if($product['item']['promotion_price']==0){{number_format($product['item']['unit_price'])}}@else{{number_format($product['item']['promotion_price'])}}@endif đồng</span></div>--}}
 
-                                <div class="cart-item">
-                                    <div class="media">
-                                        <a class="pull-left" href="#"><img src="assets/dest/images/products/cart/3.png" alt=""></a>
-                                        <div class="media-body">
-                                            <span class="cart-item-title">Sample Woman Top</span>
-                                            <span class="cart-item-options">Size: XS; Colar: Navy</span>
-                                            <span class="cart-item-amount">1*<span>$49.50</span></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="cart-caption">
-                                    <div class="cart-total text-right">Tổng tiền: <span class="cart-total-value">$34.55</span></div>
+                                    <div class="cart-total text-right">Tổng tiền: <span class="cart-total-value">{{Session('cart')->totalPrice}}đồng</span></div>
                                     <div class="clearfix"></div>
 
                                     <div class="center">
                                         <div class="space10">&nbsp;</div>
-                                        <a href="check-out" class="beta-btn primary text-center">Đặt hàng <i class="fa fa-chevron-right"></i></a>
+                                        <a href="{{route('dathang')}}" class="beta-btn primary text-center">Đặt hàng <i class="fa fa-chevron-right"></i></a>
                                     </div>
-                                </div>
-                            </div>
+                                </div></div>
+
                         </div> <!-- .cart -->
+                        @endif
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -127,16 +122,16 @@
                 <div class="visible-xs clearfix"></div>
                 <nav class="main-menu">
                     <ul class="l-inline ov">
-                        <li><a href="home">Trang chủ</a></li>
-                        <li><a href="#">Sản phẩm</a>
+                        <li><a href="/home">Trang chủ</a></li>
+                        <li><a href="">Loại sản phẩm</a>
                             <ul class="sub-menu">
-                                <li><a href="product-type">Sản phẩm 1</a></li>
-                                <li><a href="product-type">Sản phẩm 2</a></li>
-                                <li><a href="product-type">Sản phẩm 4</a></li>
+                                @foreach($loai_sp as $loai)
+                                    <li><a href="{{route('loaisanpham', $loai->id)}}">{{$loai->name}}</a></li>
+                                @endforeach
                             </ul>
                         </li>
-                        <li><a href="about">Giới thiệu</a></li>
-                        <li><a href="contacts">Liên hệ</a></li>
+                        <li><a href="/about">Giới thiệu</a></li>
+                        <li><a href="/contacts">Liên hệ</a></li>
                     </ul>
                     <div class="clearfix"></div>
                 </nav>

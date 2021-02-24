@@ -7,7 +7,7 @@
             </div>
             <div class="pull-right">
                 <div class="beta-breadcrumb font-large">
-                    <a href="home">Home</a> / <span>Prices</span>
+                    <a href="home">Trang chủ</a> / <span>Prices</span>
                 </div>
             </div>
             <div class="clearfix"></div>
