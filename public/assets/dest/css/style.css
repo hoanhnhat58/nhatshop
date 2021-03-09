@@ -1520,7 +1520,8 @@ height:35px;
 margin-right:10px
 }
 
-.beta-dropdown {height: 450px;
+.beta-dropdown {
+    max-height: 450px;
 display:none;
 }
 
@@ -1866,7 +1867,7 @@ font-size:13px
 ============================================================================= */
 
 .cart-item-scroll{
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .single-item {
@@ -2400,7 +2401,7 @@ min-height:100%
 }
 
 .beta-filter-body.latest-works li {
-height:270px
+max-height: 450px;
 }
 
 .is-item-hidden {
@@ -3047,37 +3048,37 @@ background-repeat:no-repeat;
 background-position:right
 }
 
-#payment div.payment_box .wc-credit-card-form-card-number.visa,#payment div.payment_box .wc-credit-card-form-card-expiry.visa,#payment div.payment_box .wc-credit-card-form-card-cvc.visa {
-background-image:url(../images/icons/credit-cards/visa.png)
-}
+/*#payment div.payment_box .wc-credit-card-form-card-number.visa,#payment div.payment_box .wc-credit-card-form-card-expiry.visa,#payment div.payment_box .wc-credit-card-form-card-cvc.visa {*/
+/*background-image:url(../images/icons/credit-cards/visa.png)*/
+/*}*/
 
-#payment div.payment_box .wc-credit-card-form-card-number.mastercard,#payment div.payment_box .wc-credit-card-form-card-expiry.mastercard,#payment div.payment_box .wc-credit-card-form-card-cvc.mastercard {
-background-image:url(../images/icons/credit-cards/mastercard.png)
-}
+/*#payment div.payment_box .wc-credit-card-form-card-number.mastercard,#payment div.payment_box .wc-credit-card-form-card-expiry.mastercard,#payment div.payment_box .wc-credit-card-form-card-cvc.mastercard {*/
+/*background-image:url(../images/icons/credit-cards/mastercard.png)*/
+/*}*/
 
-#payment div.payment_box .wc-credit-card-form-card-number.laser,#payment div.payment_box .wc-credit-card-form-card-expiry.laser,#payment div.payment_box .wc-credit-card-form-card-cvc.laser {
-background-image:url(../images/icons/credit-cards/laser.png)
-}
+/*#payment div.payment_box .wc-credit-card-form-card-number.laser,#payment div.payment_box .wc-credit-card-form-card-expiry.laser,#payment div.payment_box .wc-credit-card-form-card-cvc.laser {*/
+/*background-image:url(../images/icons/credit-cards/laser.png)*/
+/*}*/
 
-#payment div.payment_box .wc-credit-card-form-card-number.dinersclub,#payment div.payment_box .wc-credit-card-form-card-expiry.dinersclub,#payment div.payment_box .wc-credit-card-form-card-cvc.dinersclub {
-background-image:url(../images/icons/credit-cards/diners.png)
-}
+/*#payment div.payment_box .wc-credit-card-form-card-number.dinersclub,#payment div.payment_box .wc-credit-card-form-card-expiry.dinersclub,#payment div.payment_box .wc-credit-card-form-card-cvc.dinersclub {*/
+/*background-image:url(../images/icons/credit-cards/diners.png)*/
+/*}*/
 
-#payment div.payment_box .wc-credit-card-form-card-number.maestro,#payment div.payment_box .wc-credit-card-form-card-expiry.maestro,#payment div.payment_box .wc-credit-card-form-card-cvc.maestro {
-background-image:url(../images/icons/credit-cards/maestro.png)
-}
+/*#payment div.payment_box .wc-credit-card-form-card-number.maestro,#payment div.payment_box .wc-credit-card-form-card-expiry.maestro,#payment div.payment_box .wc-credit-card-form-card-cvc.maestro {*/
+/*background-image:url(../images/icons/credit-cards/maestro.png)*/
+/*}*/
 
-#payment div.payment_box .wc-credit-card-form-card-number.jcb,#payment div.payment_box .wc-credit-card-form-card-expiry.jcb,#payment div.payment_box .wc-credit-card-form-card-cvc.jcb {
-background-image:url(../images/icons/credit-cards/jcb.png)
-}
+/*#payment div.payment_box .wc-credit-card-form-card-number.jcb,#payment div.payment_box .wc-credit-card-form-card-expiry.jcb,#payment div.payment_box .wc-credit-card-form-card-cvc.jcb {*/
+/*background-image:url(../images/icons/credit-cards/jcb.png)*/
+/*}*/
 
-#payment div.payment_box .wc-credit-card-form-card-number.amex,#payment div.payment_box .wc-credit-card-form-card-expiry.amex,#payment div.payment_box .wc-credit-card-form-card-cvc.amex {
-background-image:url(../images/icons/credit-cards/amex.png)
-}
+/*#payment div.payment_box .wc-credit-card-form-card-number.amex,#payment div.payment_box .wc-credit-card-form-card-expiry.amex,#payment div.payment_box .wc-credit-card-form-card-cvc.amex {*/
+/*background-image:url(../images/icons/credit-cards/amex.png)*/
+/*}*/
 
-#payment div.payment_box .wc-credit-card-form-card-number.discover,#payment div.payment_box .wc-credit-card-form-card-expiry.discover,#payment div.payment_box .wc-credit-card-form-card-cvc.discover {
-background-image:url(../images/icons/credit-cards/discover.png)
-}
+/*#payment div.payment_box .wc-credit-card-form-card-number.discover,#payment div.payment_box .wc-credit-card-form-card-expiry.discover,#payment div.payment_box .wc-credit-card-form-card-cvc.discover {*/
+/*background-image:url(../images/icons/credit-cards/discover.png)*/
+/*}*/
 
 #payment div.payment_box span.help {
 font-size:11px;
@@ -3164,6 +3165,7 @@ margin:-2px 0 0 .5em;
 position:relative
 }
 .cart-show-1{
+    display: none;
     position: absolute;
     right: 15px;
     z-index: 999;

@@ -50,3 +50,7 @@ Route::post('check-out',[
     'as'=>'dathang',
     'uses'=>'App\Http\Controllers\PageController@getPostCheckOut'
 ]);
+Route::get('search',[
+    'as'=>'search',
+    'uses'=>'App\Http\Controllers\PageController@getSearch'
+]);

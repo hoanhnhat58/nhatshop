@@ -38,25 +38,25 @@
                         <div class="clearfix"></div>
                         <div class="space20">&nbsp;</div>
 
-                        <div class="single-item-desc">
-                            <p>{{$sanpham->description}}</p>
+{{--                        <div class="single-item-desc">--}}
+{{--                            <p>{{$sanpham->description}}</p>--}}
 
-                        </div>
-                        <div class="space20">&nbsp;</div>
+{{--                        </div>--}}
+{{--                        <div class="space20">&nbsp;</div>--}}
 
-                        <p>Số lượng:</p>
-                        <div class="single-item-options">
-                            <select class="wc-select" name="color">
-                                <option>Số lượng</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                            </select>
-                            <a class="add-to-cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+{{--                        <p>Số lượng:</p>--}}
+{{--                        <div class="single-item-options">--}}
+{{--                            <select class="wc-select" name="color">--}}
+{{--                                <option>Số lượng</option>--}}
+{{--                                <option value="1">1</option>--}}
+{{--                                <option value="2">2</option>--}}
+{{--                                <option value="3">3</option>--}}
+{{--                                <option value="4">4</option>--}}
+{{--                                <option value="5">5</option>--}}
+{{--                            </select>--}}
+                            <a class="add-to-cart" href="{{route('themgiohang',$sanpham->id)}}"><i class="fa fa-shopping-cart"></i></a>
                             <div class="clearfix"></div>
-                        </div>
+{{--                        </div>--}}
                     </div>
                 </div>
 
@@ -72,8 +72,10 @@
                     </div>
                  </div>
                 <div class="space50">&nbsp;</div>
+                <div class="space20">&nbsp;</div>
                 <div class="beta-products-list">
                     <h4>Sản Phẩm Tương Tự</h4>
+                    <div class="space20">&nbsp;</div>
                     <div class="row">
                         @foreach($sp_tuongtu as $sptt)
                         <div class="col-sm-4">

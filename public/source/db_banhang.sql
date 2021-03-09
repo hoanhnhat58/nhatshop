@@ -222,10 +222,10 @@ CREATE TABLE `slide` (
 --
 
 INSERT INTO `slide` (`id`, `link`, `image`) VALUES
-(1, '', 'banner1.jpg'),
-(2, '', 'banner2.jpg'),
-(3, '', 'banner3.jpg'),
-(4, '', 'banner4.jpg');
+(1, '', 'baner11.jpg'),
+(2, '', 'baner33.jpg'),
+(3, '', 'baner33.jpg'),
+(4, '', 'baner44.jpg');
 
 -- --------------------------------------------------------
 

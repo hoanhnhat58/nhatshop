@@ -22,7 +22,7 @@ class PageController extends Controller
     }
 
     public function getLoaiSp($type){
-        $sp_theoloai = Product::where('id_type',$type)->get();
+        $sp_theoloai = Product::where('id_type',$type)->paginate(4);
         // dd($sp_theoloai);
         $sp_khac = Product::where('id_type',$type)->paginate(3);
         $loai = ProductType::all();
@@ -113,5 +113,12 @@ class PageController extends Controller
 
 
     }
+    public function getSearch(Request $req){
+            $product = Product::where('name','like','%'.$req->key.'%')
+                                ->orwhere('unit_price',$req->key)
+                                ->get();
+            return view('pages.search',compact('product'));
+    }
+
 
 }

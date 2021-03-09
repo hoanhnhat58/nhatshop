@@ -3,13 +3,7 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="widget">
-                    <h4 class="widget-title">Instagram Feed</h4>
-                    <div id="beta-instagram-feed"><div>a</div></div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="widget">
-                    <h4 class="widget-title">Information</h4>
+                    <h4 class="widget-title">Thông tin liên hệ</h4>
                     <div>
                         <ul>
                             <li><a href="blog_fullwidth_2col.html"><i class="fa fa-chevron-right"></i> Hotline:0936 022 029</a></li>
@@ -20,10 +14,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div class="col-sm-10">
                     <div class="widget">
-                        <h4 class="widget-title">Contact Us</h4>
+                        <h4 class="widget-title">Địa chỉ</h4>
                         <div>
                             <div class="contact-info">
                                 <i class="fa fa-map-marker"></i>
@@ -31,6 +25,19 @@
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="widget">
+                    <h4 class="widget-title">Hỗ trợ khách hàng</h4>
+                    <div>
+                        <ul>
+                            <li><a href=""><i class="fa fa-chevron-right"></i> Chính sách bảo mật </a></li>
+                            <li><a href=""><i class="fa fa-chevron-right"></i> Vận chuyển giao nhận</a></li>
+                            <li><a href=""><i class="fa fa-chevron-right"></i> Hướng dẫn giao nhận</a></li>
+                            <li><a href=""><i class="fa fa-chevron-right"></i> Tư vấn kỹ thuật</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>

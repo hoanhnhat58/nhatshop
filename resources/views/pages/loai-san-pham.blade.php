@@ -18,14 +18,14 @@
         <div class="main-content">
             <div class="space60">&nbsp;</div>
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-sm-2 ">
                     <ul class="aside-menu">
                         @foreach($loai as $l)
                         <li><a href="{{route('loaisanpham', $l->id)}}">{{$l->name}}</a></li>
                         @endforeach
                     </ul>
                 </div>
-                <div class="col-sm-9">
+                <div class="col-sm-10">
                     <div class="beta-products-list">
                         <h4>Sản Phẩm Mới</h4>
                         <div class="beta-products-details">
@@ -35,7 +35,7 @@
 
                         <div class="row">
                             @foreach($sp_theoloai as $sp)
-                            <div class="col-sm-4">
+                            <div class="col-sm-4" >
                                 <div class="single-item">
                                     <div class="single-item-header">
                                         <a href="{{route('sanpham',$sp->id)}}"><img src="{{asset('image/product/'.$sp->image)}}" alt=""></a>
@@ -53,13 +53,14 @@
                                     </div>
                                     <div class="single-item-caption single-item-fix-pad">
                                         <a class="add-to-cart pull-left" href="{{route('themgiohang',$sp->id)}}"><i class="fa fa-shopping-cart"></i></a>
-                                        <a class="beta-btn primary" href="{{route('sanpham', $sp->id)}}">Details <i class="fa fa-chevron-right"></i></a>
+                                        <a class="beta-btn primary" href="{{route('sanpham', $sp->id)}}">Chi Tiết <i class="fa fa-chevron-right"></i></a>
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
                             </div>
                             @endforeach
                         </div>
+
                     </div> <!--.beta-products-list -->
 
                     <div class="space50">&nbsp;</div>
@@ -90,7 +91,7 @@
                                         </div>
                                         <div class="single-item-caption single-item-fix-pad">
                                             <a class="add-to-cart pull-left" href="{{route('themgiohang',$sp_k->id)}}"><i class="fa fa-shopping-cart"></i></a>
-                                            <a class="beta-btn primary" href="{{route('sanpham', $sp_k->id)}}">Details <i class="fa fa-chevron-right"></i></a>
+                                            <a class="beta-btn primary" href="{{route('sanpham', $sp_k->id)}}">Chi Tiết <i class="fa fa-chevron-right"></i></a>
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>

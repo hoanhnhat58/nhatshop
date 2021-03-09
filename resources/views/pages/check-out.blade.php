@@ -67,7 +67,7 @@
                                             <div class="media-body">
                                                 <p class="font-large">{{$cart['item']['name']}}</p>
                                                 <span class="color-gray your-order-info">số lượng : {{$cart['qty']}}</span>
-                                                <span class="color-gray your-order-info">Đơn Giá : {{$cart['price']/$cart['qty']}}</span>
+                                                <span class="color-gray your-order-info">Đơn Giá : {{number_format($cart['price']/$cart['qty'])}} đồng</span>
                                             </div>
                                         </div>
                                         <!-- end one item -->
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="your-order-item">
                                     <div class="pull-left"><p class="your-order-f18">Tổng tiền:</p></div>
-                                    <div class="pull-right"><h5 class="color-black">@if(Session::has('cart')){{$totalPrice}} @else 0 đồng @endif</h5></div>
+                                    <div class="pull-right"><h5 class="color-black">@if(Session::has('cart')){{number_format($totalPrice)}} đồng @else 0 đồng @endif</h5></div>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>

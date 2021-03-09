@@ -88,12 +88,12 @@
                                         <div class="single-item-body">
                                             <p class="single-item-title">{{$spkm->name}}</p>
                                             <p class="single-item-price" style="font-size: 18px">
-                                                <span class="flash-del">{{number_format($new->unit_price)}}đồng</span>
-                                                <span class="flash-sale">{{number_format($new->promotion_price)}}đồng</span>
+                                                <span class="flash-del">{{number_format($spkm->unit_price)}}đồng</span>
+                                                <span class="flash-sale">{{number_format($spkm->promotion_price)}}đồng</span>
                                             </p>
                                         </div>
                                         <div class="single-item-caption single-item-fix-pad ">
-                                            <a class="add-to-cart pull-left" href="{{route('themgiohang',$new->id)}}"><i class="fa fa-shopping-cart"></i></a>
+                                            <a class="add-to-cart pull-left" href="{{route('themgiohang',$spkm->id)}}"><i class="fa fa-shopping-cart"></i></a>
                                             <a class="beta-btn primary" href="{{route('sanpham', $spkm->id)}}">Chi Tiết <i class="fa fa-chevron-right"></i></a>
                                             <div class="clearfix"></div>
                                         </div>
