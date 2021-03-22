@@ -2875,7 +2875,13 @@ font-weight:inherit
 table.shop_table tfoot td .coupon input,table.shop_table tfoot th .coupon input {
 margin-right:5px
 }
-
+.submit-import{
+    height:37px;
+    background-color:#3a5c83;
+    color:#fff;
+    width: 150px;
+    /*margin-left:100px;*/
+}
 table.shop_table tfoot td .beta-btn,table.shop_table tfoot th .beta-btn {
 height:37px;
 background-color:#3a5c83;

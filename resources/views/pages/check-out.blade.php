@@ -90,7 +90,7 @@
                                         <input id="payment_method_bacs" type="radio" class="input-radio"  name="payment_method" value="COD" checked="checked" data-order_button_text="">
                                         <label for="payment_method_bacs">Thanh toán trực tiếp </label>
                                         <div class="payment_box payment_method_bacs" style="display: block;">
-                                            Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.
+                                            Thanh toán trực tiếp cho nhân viên giao nhận hàng
                                         </div>
                                     </li>
 
@@ -98,7 +98,7 @@
                                         <input id="payment_method_cheque" type="radio" class="input-radio" name="payment_method" value="ATM" data-order_button_text="">
                                         <label for="payment_method_cheque">Chuyển Khoản </label>
                                         <div class="payment_box payment_method_cheque" style="display: none;">
-                                            Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.
+                                            Cung cấp các thông tin bao gồm STK, CMND
                                         </div>
                                     </li>
 
@@ -106,13 +106,13 @@
                                         <input id="payment_method_paypal" type="radio" class="input-radio" name="payment_method" value="paypal" data-order_button_text="Proceed to PayPal">
                                         <label for="payment_method_paypal">PayPal</label>
                                         <div class="payment_box payment_method_paypal" style="display: none;">
-                                            Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account
+                                            Liên kế với Payal để thuận tiện việc thanh toán hơn
                                         </div>
                                     </li>
                                 </ul>
                             </div>
 
-                            <div class="text-center"><a class="beta-btn primary"><input type="submit">Checkout <i class="fa fa-chevron-right"></i></a></div>
+                            <div class="text-center"><input type="submit" class="submit-import"></div>
                         </div> <!-- .your-order -->
                     </div>
                 </div>

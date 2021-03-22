@@ -76,6 +76,13 @@ class PageController extends Controller
         }
         return redirect()->back();
     }
+    public function  getPostInfor(Request $req){
+        $cart = Session::get('cart');
+        $customer = new Customer;
+
+        $customer ->save();
+    }
+
     public function getPostCheckOut(Request $req){
         // dd($req);
         $cart = Session::get('cart');

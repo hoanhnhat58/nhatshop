@@ -11,8 +11,8 @@
             <div class="container">
                 <div class="pull-left auto-width-left">
                     <ul class="top-menu menu-beta l-inline">
-                        <li><a href=""><i class="fa fa-home"></i>Số 1 Mỹ An 15, Bắc Mỹ An,Ngũ Hành Sơn,Đà Nẵng</a></li>
-                        <li><a href=""><i class="fa fa-phone"></i>0981928608</a></li>
+                        <li><a href="contacts"><i class="fa fa-home"></i>Số 1 Mỹ An 15, Bắc Mỹ An,Ngũ Hành Sơn,Đà Nẵng</a></li>
+                        <li><a href="#"><i class="fa fa-phone"></i>0981928608</a></li>
                     </ul>
                 </div>
                 <div class="pull-right auto-width-right">
@@ -47,6 +47,18 @@
                                         @csrf
                                     </form>
                                 </div>
+
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                             </li>
                         @endguest
                     </ul>
